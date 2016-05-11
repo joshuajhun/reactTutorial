@@ -6,7 +6,7 @@ const App = React.createClass({
   return(
      <div className="catch-of-the-day">
        <div class ="menu">
-         <Header />
+         <Header tagline="stuff fam"/>
        </div>
        <Order />
        <Inventory />
@@ -17,8 +17,17 @@ const App = React.createClass({
 
 const Header = React.createClass({
   render :function(){
+    console.log(this.props)
     return(
-      <p>Header</p>
+      <header className="top">
+        <h1>Catch
+          <span className="ofThe">
+          <span className="of">of</span>
+          <span className="the">the</span>
+          </span>
+          Day</h1>
+        <h3 className="tagline"><span>{this.props.tagline}</span></h3>
+      </header>
     )
   }
 })
